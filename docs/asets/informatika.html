@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Informatika</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"/>
+	</head>
+	<body class="body-info">
+		<!-- тесты -->
+		<div class="container">
+			<div class="quiz-header">
+				<p class="question-text"></p>
+			</div>
+			<div class="option-list"></div>
+			<div class="quiz-footer">
+				<button class="сancel active">Back</button>
+				<div class="process">
+					<div class="question-total">0/6</div>
+					<div class="process-val"></div>
+				</div>
+				<button class="next-btn active">Continuе</button>
+			</div>
+		</div>
+		<!-- загаловок -->
+		<div class="z-container">
+			<div class="header">
+				<span class="gradient">Informatika</span>
+			</div>
+			<div class="center">
+				<h2>Условии использования:</h2>
+				<p>
+					Привет! Добро пожаловать на наш цифровой тест.<br />
+					1.Пройди тест и испытай себя<br />
+					2.Это первая версия нашего проекта<br />
+					3.Прошу оставить свои отзывы после прохождения теста<br />
+					4.По любым вопросам и новыми идеями можешь обратится админстраторам в
+					подвале главной страницы
+				</p>
+			</div>
+			<div class="footer">
+				<button class="startbtn"><span><i></i></span></button>
+			</div>
+		</div>
+		<!-- концовка -->
+		<div class="k-container">
+			<div class="header">
+				<p>1 уровень пройдено</p>
+				<span>вы ответили правильно на:</span>
+			</div>
+			<div class="center">
+				<div class="shkala">
+					<span class="procent">0%</span>
+				</div>
+				<div class="pahlava">
+					<!-- <span class="header-score">Вы ответили на 0 из 6</span> -->
+					<div class="rech">Превосходно<br />продолжай в том же духе</div>
+				</div>
+			</div>
+			<div class="footer">
+				<button class="gohomebtn" onclick="window.location = '../index.html'"><img src="../img/hom.png" /></button>
+				<button class="tryagainbtn"><img src="../img/res.png" /></button>
+				<button class="level"><img src="../img/level.jpg" /></button>
+			</div>
+		</div>
+		<script src="../js/informatika.js"></script>
+		<script src="../js/main.js"></script>
+	</body>
+</html>

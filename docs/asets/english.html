@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>English</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="body-eng">
+		<!-- тесты -->
+		<div class="container">
+			<div class="quiz-header">
+				<p class="question-text"></p>
+			</div>
+			<div class="option-list"></div>
+			<div class="quiz-footer">
+				<button class="сancel active">Back</button>
+				<div class="process">
+					<div class="question-total">0/6</div>
+					<div class="process-val"></div>
+				</div>
+				<button class="next-btn active">Continuе</button>
+			</div>
+		</div>
+		<!-- загаловок -->
+		<div class="z-container">
+			<div class="header">
+				<span class="gradient">English</span>
+			</div>
+			<div class="center">
+				<h2>Условии:</h2>
+				<p>
+					Привет! Добро пожаловать на наш цифровой тест.<br />
+					1.Пройди тест и испытай себя<br />
+					2.Это первая версия нашего проекта<br />
+					3.Прошу оставить свои отзывы после прохождения теста<br />
+					4.По любым вопросам и новыми идеями можешь обратится админстраторам в
+					подвале главной страницы
+				</p>
+			</div>
+			<div class="footer">
+				<button class="startbtn"><span><i></i></span></button>
+			</div>
+		</div>
+		<!-- концовка -->
+		<div class="k-container">
+			<div class="header">
+				<p>1 уровень пройдено</p>
+				<span>вы ответили правильно на:</span>
+			</div>
+			<div class="center">
+				<div class="shkala">
+					<span class="procent">0%</span>
+				</div>
+				<div class="pahlava">
+					<!-- <span class="header-score">Вы ответили на 0 из 6</span> -->
+					<div class="rech">Превосходно<br />продолжай в том же духе</div>
+				</div>
+			</div>
+			<div class="footer">
+				<button class="gohomebtn" onclick="window.location = '../index.html'"><img src="../img/hom.png" /></button>
+				<button class="tryagainbtn"><img src="../img/res.png" /></button>
+				<button class="level"><img src="../img/level.jpg" /></button>
+			</div>
+		</div>
+		<!-- стилизация -->
+		<style>
+			/*вопросы и ответы*/
+			.body-eng {
+			background: url(https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149142669.jpg?w=1380&t=st=1716415413~exp=1716416013~hmac=5a56f82385b749783315a243e4c9a62e2d39c015872a5d58106db0164f0bf42f) no-repeat;
+			background-size: 100% 100vh;
+			}
+			.container {
+				border: 3.5px solid #cc0000;
+			}
+			.quiz-header {
+				border: 3px solid #cc0000;
+			}
+			.option-list .option {
+				border: 3px solid #cc0000;
+				border: none;
+			}
+			.option-list .option:hover {
+				box-shadow: 0px 0px 15px #ff0303;
+			}
+			.cancel.active {
+				background: #ff0303;;
+			}
+			.next-btn.active {
+				background: #c40000;
+			}
+			.quiz-footer .next-btn.active:hover {
+				background: #ff1111;
+				box-shadow: 0 0 5px #ff0303;
+			}
+			/*загаловок*/
+			.z-container {
+				border: 3.5px solid #cc0000;
+			}
+			.header .gradient {
+				background-image: linear-gradient(
+					360deg,
+					rgb(121, 0, 0) 20%,
+					rgb(149, 0, 0) 35%,
+					#ff6262 100%);
+			}
+			.center {
+				border: 2px solid #cc0000;
+			}
+			.startbtn {
+				background: #cc0000;
+			}
+			.startbtn:hover {
+				background: #ff0303;
+			}
+			.startbtn span i {
+				border-left: 20px solid rgb(255, 0, 0)
+			}
+			/*коцовка*/
+			.k-container {
+				border: 3.5px solid #cc0000;
+			}
+			.header-score {
+				background: #cc0000;
+			}
+			.tryagainbtn,
+			.gohomebtn,
+			.level {
+				background-color: #cc0000;
+			}
+			.tryagainbtn:hover,
+			.gohomebtn:hover,
+			.level:hover {
+				box-shadow: 0 0 10px #360000;
+				background: #c40000;
+			}
+			.option-list .option.incorrect {
+				box-shadow: 0px 0px 15px #000000;
+			}
+		</style>
+		<script src="../js/puest.js"></script>
+		<script src="../js/main.js"></script>
+	</body>
+</html>

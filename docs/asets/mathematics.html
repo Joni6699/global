@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mathematics</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
+			rel="stylesheet"/>
+	</head>
+	<body class="body-math">
+		<!-- тесты -->
+		<div class="container">
+			<div class="quiz-header">
+				<p class="question-text"></p>
+			</div>
+			<div class="option-list"></div>
+			<div class="quiz-footer">
+				<button class="сancel active">Back</button>
+				<div class="process">
+					<div class="question-total">0/6</div>
+					<div class="process-val"></div>
+				</div>
+				<button class="next-btn active">Continuе</button>
+			</div>
+		</div>
+		<!-- загаловок -->
+		<div class="z-container">
+			<div class="header">
+				<span class="gradient">Mathematics</span>
+			</div>
+			<div class="center">
+				<h2>Условии:</h2>
+				<p>
+					Привет! Добро пожаловать на наш цифровой тест.<br />
+					1.Пройди тест и испытай себя<br />
+					2.Это первая версия нашего проекта<br />
+					3.Прошу оставить свои отзывы после прохождения теста<br />
+					4.По любым вопросам и новыми идеями можешь обратится админстраторам в
+					подвале главной страницы
+				</p>
+			</div>
+			<div class="footer">
+				<button class="startbtn"><span><i></i></span></button>
+			</div>
+		</div>
+		<!-- концовка -->
+		<div class="k-container">
+			<div class="header">
+				<p>1 уровень пройдено</p>
+				<span>вы ответили правильно на:</span>
+			</div>
+			<div class="center">
+				<div class="shkala">
+					<span class="procent">0%</span>
+				</div>
+				<div class="pahlava">
+					<!-- <span class="header-score">Вы ответили на 0 из 6</span> -->
+					<div class="rech">Превосходно<br />продолжай в том же духе</div>
+				</div>
+			</div>
+			<div class="footer">
+				<button class="gohomebtn" onclick="window.location = '../index.html'"><img src="../img/hom.png" /></button>
+				<button class="tryagainbtn"><img src="../img/res.png" /></button>
+				<button class="level"><img src="../img/level.jpg" /></button>
+			</div>
+		</div>
+		<!-- стилизация -->
+		<style>
+			/*вопросы и ответы*/
+			.body-math{
+			background: url(../img/math-1.jpg) no-repeat;
+			background-size: 100% 100vh;
+			}
+			.container {
+				border: 3.5px solid #acacac;
+			}
+			.quiz-header {
+				border: 3px solid #acacac;
+			}
+			.option-list .option {
+				border: 3px solid #acacac;
+				border: none;
+			}
+			.option-list .option:hover {
+				box-shadow: 0px 0px 15px #c7c7c7;
+			}
+			.cancel.active {
+				background: #c7c7c7;
+			}
+			.next-btn.active {
+				background: #acacac;
+			}
+			.quiz-footer .next-btn.active:hover {
+				background: #cecece;
+				box-shadow: 0 0 10px #acacac;
+			}
+			/*загаловок*/
+			.z-container {
+				border: 3.5px solid #c7c7c7;
+			}
+			.header .gradient {
+				background-image: linear-gradient(
+					360deg,
+					rgb(53 53 53) 20%,
+					rgb(85 85 85) 35%,
+					#c3c3c3 100%);
+			}
+			.center {
+				border: 2px solid #acacac;
+			}
+			.startbtn {
+				background: #acacac;
+			}
+			.startbtn:hover {
+				background: #c7c7c7;
+			}
+			.startbtn span i {
+				border-left: 20px solid #acacac;
+			}
+			/*коцовка*/
+			.k-container {
+				border: 3.5px solid #acacac;
+			}
+			.header-score {
+				background: #acacac;
+			}
+			.tryagainbtn,
+			.gohomebtn,
+			.level {
+				background-color: #acacac;
+			}
+			.tryagainbtn:hover,
+			.gohomebtn:hover,
+			.level:hover {
+				box-shadow: 0 0 10px #013600;
+				background: #acacac;
+			}
+			.option-list .option.incorrect {
+				box-shadow: 0px 0px 15px #000000;
+			}
+		</style>
+		<script src="../js/puest.js"></script>
+		<script src="../js/main.js"></script>
+	</body>
+</html>

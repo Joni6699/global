@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+body {
+    background: url("../img/info-2.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+/* главная кнопка */
+.btn {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+.btn button {
+    font-size: 25px;
+    font-weight: 500;
+    color: #007bff;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+/* загаловок сайта */
+.header {
+    height: 80px;
+    font-weight: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.header-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center ;
+}
+.header a {
+    color: #00eaff;
+    text-decoration: none;
+}
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+  /* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 650px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.603);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    overflow: auto;
+}
+/* элементы меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #c3c3c3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.menu__items {
+    display: block;
+    padding: 12px 24px;
+    color: #007bff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu__item:hover {
+    color: #1787ff;
+    background-color: #3535359d;
+    text-shadow: 0px 0px 10px #459fff;
+}
+.menu__items:hover {
+    background-color: rgba(75, 75, 75, 0.616)
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .30s;
+}
+.menu__box {
+  transition-duration: .30s;
+}
+.menu__item {
+  transition-duration: .40s;
+}
+.menu__item {
+    transition-duration: .40s;
+}
+
+
+
+
+/* informatics */
+.body-info,
+.body-bio,
+.body-math,
+.body-rus,
+.body-eng,
+.body-taj {
+    background: url(../img/info-2.jpg) no-repeat;
+    background-size: 100% 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.container {
+   display: flex;
+   flex-direction: column;
+   height: 505px;
+   width: 450px;
+   backdrop-filter: blur(5px);
+   border: 3px solid #389cff;
+   border-radius: 15px;
+   padding: 20px;
+  
+
+}
+.question {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 55px;
+   width: 100%;
+   background: #dedede;
+   border: 3px solid #389cff;
+   border-radius: 10px;
+}
+.question p{
+    font-size: 25px;
+    font-weight: 700;
+
+}
+.answer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 360px;
+   width: 100%;
+   margin: 10px 0;
+}
+
+.answer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 0;
+    height: 320px;
+    width: 420px;
+    background: #dedede;
+    border: 3px solid #389cff;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+}
+.answer-content p {
+    font-size: 20px;
+    font-weight: 500;
+}
+.answer-content:hover {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px #3aa7ff;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 95%;
+    background: #dedede;
+    border: 3px solid #389cff;
+    border-radius: 10px;
+    padding: 10px;
+ }
+ .timer {
+    background: #ffffff;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+ }
+ .time-text {
+    font-weight: 600;
+    font-size: 21px;
+    user-select: none;
+    padding: 0 0 0 15px;
+ }
+ .time-sec {
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+ }
+ .next {
+    height: 100%;
+    width: 70px;
+    background: #389cff;
+    border-radius: 10px;
+ }
+ .next:hover {
+    box-shadow: 0px 0px 10px #3aa7ff;
+ }
+ .time p {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 4px 7px;
+ }
+ .next p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px 7px;
+ }
+
+
+ /* biology */
+ .body-bio {
+    background: url(../img/bio.jpg) no-repeat;
+    background-size: 100% 100vh;
+
+.container {
+    border: 3px solid #00e41b;
+}
+.question {
+    border: 3px solid #00e41b;
+}
+.answer-content {
+    border: 3px solid #00e41b;
+}
+.answer-content:hover {
+    box-shadow: 0px 0px 15px #00e41b;
+}
+.footer {
+    border: 3px solid #00e41b;
+}
+.next {
+    background: #00e41b;
+}
+.next:hover {
+    box-shadow: 0px 0px 10px #00e41b;
+} }
+
+
+
+ /* mathematics */
+ .body-math {
+    background: url(../img/info-2.jpg) no-repeat;
+    background-size: 100% 100vh;
+
+.container {
+    border: 3px solid #acacac;
+}
+.question {
+    border: 3px solid #acacac;
+}
+.answer-content {
+    border: 3px solid #acacac;
+}
+.answer-content:hover {
+    box-shadow: 0px 0px 15px #acacac;
+}
+.footer {
+    border: 3px solid #acacac;
+}
+.next {
+    background: #acacac;
+}
+.next:hover {
+    box-shadow: 0px 0px 10px #acacac;
+} }
+
+
+
+/* russian */
+.body-rus {
+    background: url(../img/rus-3.jpg) no-repeat;
+    background-size: 100% 100vh;
+
+.container {
+    border: 3px solid #dcc600;
+}
+.question {
+    border: 3px solid #ffff00;
+}
+.answer-content {
+    border: 3px solid #ffff00;
+}
+.answer-content:hover {
+    box-shadow: 0px 0px 10px #ffff00;
+}
+.footer {
+    border: 3px solid #ffff00;
+}
+.next {
+    background: #ffff00;
+}
+.next:hover {
+    box-shadow: 0px 0px 10px #ffff00;
+} }
+
+
+
+/* english */
+.body-eng {
+    background: url(../img/eng-3.jpg) no-repeat;
+    background-size: 100% 100vh;
+
+.container {
+    border: 3px solid #ff0000;
+}
+.question {
+    border: 3px solid #ff0000;
+}
+.answer-content {
+    border: 3px solid #ff0000;
+}
+.answer-content:hover {
+    box-shadow: 0px 0px 15px #ff0000;
+}
+.footer {
+    border: 3px solid #ff0000;
+}
+.next {
+    background: #ff0000;
+}
+.next:hover {
+    box-shadow: 0px 0px 10px #ff0000;
+} }
+
+
+
+/* tajik */
+.body-taj {
+    background: url(../img/taj.jpg) no-repeat;
+    background-size: 100% 100vh;
+
+.container {
+    border: 3px solid #ff0000;
+}
+.question {
+    border: 3px solid #ff0000;
+}
+.answer-content {
+    border: 3px solid #ff0000;
+}
+.answer-content:hover {
+    box-shadow: 0px 0px 15px #ff0000;
+}
+.footer {
+    border: 3px solid #ff0000;
+}
+.next {
+    background: #ff0000;
+}
+.next:hover {
+    box-shadow: 0px 0px 10px #ff0000;
+} }

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>глобал тест</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"/>
+		<style>
+            * {
+                margin: 0;
+				font-family: 'Roboto', sans-serif;
+            }		
+			body {
+				width: 100%;
+				height: 100vh;
+				background: #eaeaea;
+				overflow: hidden;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+			}
+			.container {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: #f5f5f5;
+				padding: 30px;
+			}
+			.svyaz {
+				z-index: 2;
+				position: relative;
+				text-align: end;
+				margin: 25px 55px;
+			}
+			.svyaz a {
+				text-decoration: none;
+				color: #acacac;
+				font-size: 20px;
+				border: 3px solid #acacac;
+				padding: 7px 12px;
+				transition: .3s ease-in;
+			}
+			.svyaz a:hover {
+				color: #ffffff;
+				border: 3px solid #ffffff;
+				background: #00000002;
+				transition: .2s ease-in;
+			}
+			.slide {
+				width: max-content;
+				margin-top: 30px;
+			}
+			.item {
+				width: 200px;
+				height: 300px;
+				background-position: 50% 50%;
+				display: inline-block;
+				transition: 0.5s;
+				background-size: cover;
+				position: absolute;
+				border-radius: 20px;
+				z-index: 1;
+				font-family: system-ui;
+				font-weight: 900;
+				top: 50%;
+				transform: translate(0, -50%);
+				box-shadow: 0 30px 50px hsl(0, 0%, 19%);
+			}
+			.item:nth-child(1),
+			.item:nth-child(2) {
+				left: 0;
+				top: 0;
+				transform: translate(0, 0);
+				border-radius: 0;
+				width: 100%;
+				height: 100%;
+				box-shadow: none;
+			}
+			.item:nth-child(3) {
+				left: 50%;
+			}
+			.item:nth-child(4) {
+				left: calc(50% + 220px);
+			}
+			.item:nth-child(5) {
+				left: calc(50% + 440px);
+			}
+			.item:nth-child(n + 6) {
+				left: calc(50% + 660px);
+				opacity: 0;
+			}
+			.item .content {
+				position: absolute;
+				top: 50%;
+				left: 100px;
+				width: 300px;
+				text-align: left;
+				padding: 0;
+				transform: translate(0%, -50%);
+				display: none;
+				color: #eee;
+			}
+			.item:nth-child(2) .content {
+				display: block;
+				z-index: 999;
+			}
+			.item .name {
+				font-size: 40px;
+				opacity: 0;
+				animation: infocontent .6s ease-in-out 1 forwards;
+			}
+			.item .des {
+				opacity: 0;
+				font-size: 17px;
+				animation: infocontent .6s ease-in-out 0.2s 1 forwards;
+				font-weight: 700;
+				margin: 20px 0;
+			}
+			.item button {
+				border: 1px solid #0075c4;
+				padding: 10px 20px;
+				opacity: 0;
+				font-family: system-ui;
+				font-weight: 900;
+				transition: 0.3s;
+				cursor: pointer;
+				border-radius: 10px;
+				background: #0075c4;
+				color: #eaeaea;
+				animation: infocontent .6s ease-in-out 0.4s 1 forwards;
+			}
+			.item button:hover {
+				background: #148dde;
+				color: #eaeaea;
+				border: 1px solid #0075c4;
+				transition: 0.2s;
+			}
+			@keyframes infocontent {
+				0% {
+					opacity: 0;
+					transform: translate(0, 100px);
+					filter: blur(33px);
+				}
+				100% {
+					transform: translate(0, 0);
+					filter: blur(0);
+					opacity: 1;
+				}
+			}
+			.buttons {
+				position: absolute;
+				bottom: 50px;
+				z-index: 9999;
+				text-align: center;
+				width: 100%;
+			}
+			.buttons button {
+				width: 50px;
+				font-weight: 900;
+				font-family: fantasy;
+				font-size: 30px;
+				height: 50px;
+				margin: 0 10px;
+				transition: 0.6s;
+				cursor: pointer;
+				border-radius: 50%;
+				border: none;
+			}
+			.buttons button:hover {
+				transition: 0.4s;
+				color: #ffffff;
+				background: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="svyaz"><a href="asets/footer.html">Связь с разработчиком</a></h1>
+			<div class="slide">
+				<div class="item" style="background-image: url('img/eng-3.jpg')">
+					<div class="content">
+						<div class="name">English</div>
+						<div class="des">
+							Прокочай свои знания в иностранных языках
+						</div>
+						<a href="asets/english.html"><button onclick="timer()">Начать</button></a>
+					</div>
+				</div>
+				<div class="item" style="background-image: url('img/bio.jpg')">
+					<div class="content">
+						<div class="name">Биология</div>
+						<div class="des">
+							Прокочай свои знания в области ботаники, зоологии и биологии
+						</div>
+						<a href="asets/biology.html"><button onclick="timer()">Начать</button></a>
+					</div>
+				</div>
+				<div class="item" style="background-image: url('img/inoff.jpg')">
+					<div class="content">
+						<div class="name">Информатика</div>
+						<div class="des">
+							Прокочай свои знания в мире технологии и информатики 
+						</div>
+						<a href="asets/informatika.html"><button onclick="timer()">Начать</button></a>
+					</div>
+				</div>
+				<div class="item" style="background-image: url('img/math-1.jpg')">
+					<div class="content">
+						<div class="name">Математика</div>
+						<div class="des">
+							Прокочай свои знания в направлениях математики, алгебры и высшей математики 
+						</div>
+						<a href="asets/mathematics.html"><button onclick="timer()">Начать</button></a>
+					</div>
+				</div>
+				<div class="item" style="background-image: url('img/rus-3.jpg')">
+					<div class="content">
+						<div class="name">Русский язык</div>
+							<div class="des">
+							Покочай свои знанияпо русскому языку
+						</div>
+						<a href="asets/russian.html"><button onclick="timer()">Начать</button></a>
+					</div>
+				</div>
+				<!-- <div class="item" style="background-image: url('img/taj.jpg')">
+					<div class="content">
+						<div class="name">Таджикский язык</div>
+						<div class="des">
+							Прокочай свои знания в разных языках
+						</div>
+						<a href="asets/tajik.html"><button onclick="timer()">Начать</button></a>
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<div class="buttons">
+				<button id="nazad">&#60;</button>
+				<button id="dalshe">&#62;</button>
+			</div>
+		</div>
+		<script>
+			const btnNext = document.getElementById('dalshe')
+			const btnNazad = document.getElementById('nazad')
+			const slide = document.getElementsByClassName('slide')[0]
+			btnNext.addEventListener('click', () => {
+				let item = document.querySelectorAll('.item')
+				slide.appendChild(item[0])
+			})
+			btnNazad.addEventListener('click', () => {
+				let item = document.querySelectorAll('.item')
+				slide.prepend(item[item.length - 1])
+			})
+		</script>
+	</body>
+</html>
